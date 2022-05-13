@@ -6,11 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateStudentsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    protected $table = 'students';
+
+    protected $fillable = ['name', 'course'];
     public function up()
     {
         Schema::create('students', function (Blueprint $table) {
